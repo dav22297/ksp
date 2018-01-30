@@ -144,6 +144,12 @@ FUNCTION Pitch_slip {
 }
 
 
+FUNCTION Roll_vel {
+  parameter ves.
+
+  return VDOT(ves:facing:forevector, ves:ANGULAR_VEL).
+}
+
 // function returning total angle of slip of compass and horizontal slip
 FUNCTION Total_slip {
   parameter ves.
@@ -225,7 +231,7 @@ FUNCTION Runway_Latitude_vector {
 
 // function returning the Longitude of a virtuall line continued from west to east side of runway, paramteter indicates the lenght of the line
 // 0 is east side of runway, 1 one times the lenght of the runway in east direction...
-FUNCTION Runway_Longitude_vector{
+FUNCTION Runway_Longitude_vector {
   Parameter lenght.
 
   RETURN lenght * (Runway_start_Longitude-Runway_end_Longitude)+Runway_start_Longitude.
