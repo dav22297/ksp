@@ -1,3 +1,4 @@
+import numpy as np
 __name__ = "PIDLoop"
 
 
@@ -44,3 +45,22 @@ class PIDLoop:
     def reset(self):
         self.Integral = 0
         self.Last_Error = 0
+
+
+class LinearFirstOrderController:
+
+    def __init__(self, max_feedback=1, desired_change_of_feedback=1, softness=1):
+        self.Max_feedback = max_feedback
+        self.Desired_change_of_feedback = desired_change_of_feedback
+        self.Softness = softness
+
+    def _attenuation(self, x):
+        return 1 / (1 + np.exp(-6 / self.Softness * (np.abs(x) - self.Softness)))
+
+    def feedback(self, delta):
+        feedback = - np.sign(delta) * np.minimum(np.sqrt(0.5 * self.Desired_change_of_feedback * np.abs(delta)) *
+                                                 self._attenuation(delta),
+                                                 self.Max_feedback)
+        return feedback
+
+
