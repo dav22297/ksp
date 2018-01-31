@@ -1,14 +1,7 @@
 import numpy as np
 
 
-def heading_difference(heading1, heading2):
-    raw = (heading2 - heading1)
-    if raw > 180:
-        difference = -360 + raw
-    elif raw < -180:
-        difference = 360 + raw
-    else:
-        difference = raw
-    return difference
+def attenuation(softness, x):
+    return 1 / (1 + np.exp(-6 / softness * (np.abs(x) - softness)))
 
-print(heading_difference(340, 0))
+print(attenuation(1, 1))

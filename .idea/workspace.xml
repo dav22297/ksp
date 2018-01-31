@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29eeed16-f2ff-4814-aab3-955ccd5a2e66" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/other.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PID.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PID_test.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/autopilot.py" />
-      <change beforePath="$PROJECT_DIR$/test.ks" afterPath="$PROJECT_DIR$/test.ks" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/PID.py" afterPath="$PROJECT_DIR$/PID.py" />
+      <change beforePath="$PROJECT_DIR$/autopilot.py" afterPath="$PROJECT_DIR$/autopilot.py" />
+      <change beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,6 +16,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ksp$scrapper.coverage" NAME="scrapper Coverage Results" MODIFIED="1515419552598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Fraunhofer/Fraunhofer/Image Scrapping" />
+    <SUITE FILE_PATH="coverage/ksp$test.coverage" NAME="test Coverage Results" MODIFIED="1517382186491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ksp$PID.coverage" NAME="PID Coverage Results" MODIFIED="1514296070750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ksp$panda.coverage" NAME="panda Coverage Results" MODIFIED="1515060236790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ksp$Likelihood.coverage" NAME="Likelihood Coverage Results" MODIFIED="1516958337721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Rechnernutzung/Blatt9" />
@@ -63,34 +62,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PID.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PID.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PID.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="447">
+              <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autopilot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="autopilot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autopilot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="36" column="64" lean-forward="true" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
-              <folding />
+            <state relative-caret-position="396">
+              <caret line="52" column="4" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="einlesen.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../Praktikum/Beta-Spektroskopie/Auswertung/einlesen.py">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" column="53" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="14" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="67" lean-forward="true" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,8 +117,9 @@
         <option value="$PROJECT_DIR$/PID_test.py" />
         <option value="$PROJECT_DIR$/../../Praktikum/Massenspektrometer/Massenspektrometrie/Auswertung/peakfit.py" />
         <option value="$PROJECT_DIR$/../../Rechnernutzung/Blatt10/lBlatt.py" />
-        <option value="$PROJECT_DIR$/PID.py" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/autopilot.py" />
+        <option value="$PROJECT_DIR$/PID.py" />
       </list>
     </option>
   </component>
@@ -180,7 +180,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lBlatt">
+  <component name="RunManager" selected="Python.test">
     <configuration name="Likelihood" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -214,25 +214,6 @@
       <module name="ksp" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PID_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="integral" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../Praktikum/Beta-Spektroskopie/Auswertung" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ksp" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../Praktikum/Beta-Spektroskopie/Auswertung/integral.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -276,20 +257,39 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ksp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.integral" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Likelihood" />
-      <item index="2" class="java.lang.String" itemvalue="Python.peakfit" />
-      <item index="3" class="java.lang.String" itemvalue="Python.lBlatt" />
-      <item index="4" class="java.lang.String" itemvalue="Python.PID_test" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Likelihood" />
+      <item index="1" class="java.lang.String" itemvalue="Python.peakfit" />
+      <item index="2" class="java.lang.String" itemvalue="Python.lBlatt" />
+      <item index="3" class="java.lang.String" itemvalue="Python.PID_test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.lBlatt" />
-        <item index="1" class="java.lang.String" itemvalue="Python.peakfit" />
-        <item index="2" class="java.lang.String" itemvalue="Python.PID_test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Likelihood" />
-        <item index="4" class="java.lang.String" itemvalue="Python.integral" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.lBlatt" />
+        <item index="2" class="java.lang.String" itemvalue="Python.peakfit" />
+        <item index="3" class="java.lang.String" itemvalue="Python.PID_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Likelihood" />
       </list>
     </recent_temporary>
   </component>
@@ -502,24 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Praktikum/Beta-Spektroskopie/Auswertung/einlesen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="53" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="14" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PID_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../Rechnernutzung/Blatt10/lBlatt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
@@ -538,18 +520,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PID.py">
+    <entry file="file://$PROJECT_DIR$/../../Praktikum/Beta-Spektroskopie/Auswertung/einlesen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="53" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="14" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="67" lean-forward="true" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PID_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/autopilot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="36" column="64" lean-forward="true" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+        <state relative-caret-position="396">
+          <caret line="52" column="4" lean-forward="true" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PID.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
           <folding />
         </state>
       </provider>
