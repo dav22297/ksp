@@ -137,3 +137,14 @@ class FlightController:
         self.vessel.control.pitch = pitch_control
         self.vessel.control.yaw = yaw_control
         self.vessel.control.thrust = thrust_control
+
+
+class Derivitive:
+
+    def __init__(self, last_time=-1, lastlast_time=-1):
+        self.last_time = last_time
+        self.lastlast_time = lastlast_time
+        self.last_value = 0
+        self.lastlast_value = 0
+
+    def derive(self, value):
