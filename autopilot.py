@@ -1,4 +1,4 @@
-from PID import PIDLoop, LinearFirstOrderController, FlightController
+from PID import PIDLoop, LinearFirstOrderController, FlightController, Derivative
 import time
 import krpc
 import numpy as np
