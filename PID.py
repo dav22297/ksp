@@ -102,7 +102,7 @@ class FlightController:
         self.yaw_kp = 0.
         self.yaw_ki = 0
         self.yaw_kd = 0.0
-        self.yaw_pid = PIDLoop(self.yaw_kp, self.yaw_ki, self.yaw_kd, time=time, min_output=0)
+        self.yaw_pid = PIDLoop(self.yaw_kp, self.yaw_ki, self.yaw_kd, time=time)
 
         self.max_airspeed_acc = 10
         self.max_airspeed_acc_acc = 1
@@ -112,7 +112,7 @@ class FlightController:
         self.thrust_kp = 1
         self.thrust_ki = 0
         self.thrust_kd = 0.0
-        self.thrust_pid = PIDLoop(self.thrust_kp, self.thrust_ki, self.thrust_kd, time=time)
+        self.thrust_pid = PIDLoop(self.thrust_kp, self.thrust_ki, self.thrust_kd, time=time, min_output=0)
 
     def update_state(self, time):
 
@@ -138,29 +138,6 @@ class FlightController:
         self.airspeed = self.vessel.flight().true_air_speed
         self.acceleration.derive(self.airspeed, time)
 
-    def update(self, target_heading, target_altitude, target_speed, time):
-
-        self.update_state(time)
-
-        roll = self.heading_to_roll.feedback(target_heading - self.heading)
-        rollvel= self.roll_to_rollvel.feedback(roll - self.roll)
-        roll_control = self.roll_pid.update(rollvel, time)  # - vessel rollvel
-
-        climbrate = self.altitude_to_climbrate.feedback(delta_altitude)
-        pitchvel = self.climbrate_to_pitchvel.feedback(climbrate)
-        pitch_control = self.pitch_pid.update(pitchvel, time)  # - vessel pitchvel
-
-        yawvel = self.yaw_to_yawvel.feedback(delta_yaw)
-        yaw_control = self.yaw_pid.update(yawvel, time)  # - vessel yaw vel
-
-        acc = self.speed_to_acc.feedback(delta_speed)
-        thrust_control = self.thrust_pid.update(acc, time)  # - vessel acc
-
-        self.vessel.control.roll = roll_control
-        self.vessel.control.pitch = pitch_control
-        self.vessel.control.yaw = yaw_control
-        self.vessel.control.thrust = thrust_control
-
     def raw_control(self, pitch_acc, roll_acc, yaw_acc, airspeed_change, time):
 
         self.pitch_pid.Set_point = pitch_acc
@@ -180,22 +157,33 @@ class FlightController:
     def rate_control(self, pitch_vel, roll_vel, yaw_vel, airspeed, time):
 
         pitch_vel_diff = pitch_vel - self.pitch_vel
-        pitch_acc = np.sign(pitch_vel_diff) * self.max_pitchacc * attenuation(pitch_vel_diff, 1)
+        pitch_acc = np.sign(pitch_vel_diff) * self.max_pitchacc * attenuation(pitch_vel_diff, 5)
         roll_vel_diff = roll_vel - self.roll_vel
-        roll_acc = np.sign(roll_vel_diff) * self.max_rollacc * attenuation(roll_vel_diff, 1)
+        roll_acc = np.sign(roll_vel_diff) * self.max_rollacc * attenuation(roll_vel_diff, 5)
         yaw_vel_diff = yaw_vel - self.yaw_vel
-        yaw_acc = np.sign(yaw_vel_diff) * self.max_yawacc * attenuation(yaw_vel_diff, 1)
+        yaw_acc = np.sign(yaw_vel_diff) * self.max_yawacc * attenuation(yaw_vel_diff, 5)
         acc = linear_acceleration_model(airspeed - self.airspeed, self.max_airspeed_acc, self.max_airspeed_acc_acc, 5)
 
         self.raw_control(pitch_acc, roll_acc, yaw_acc, acc, time)
 
     def attitude_control(self, pitch, roll, yaw, airspeed, time):
+
         pitch_vel = linear_acceleration_model(pitch - self.pitch, self.max_pitchvel, self.max_pitchacc, 1)
         roll_vel = linear_acceleration_model(roll - self.roll, self.max_rollvel, self.max_rollacc, 1)
         yaw_vel = linear_acceleration_model(yaw - self.heading, self.max_yawvel, self.max_yawacc, 1)
 
         self.rate_control(pitch_vel, roll_vel, yaw_vel, airspeed, time)
 
+    def tune_pid(self, max_engage_roll=20, max_engage_pitch=20, max_engage_yaw=20):
+
+        inertia = np.array(self.vessel.moment_of_inertia(self.vessel.reference_frame))
+        torque = np.array(self.vessel.available_torque(self.vessel.reference_frame))
+        torque = np.mean(torque, axis=0)
+        acceleration = np.degrees(torque / inertia)
+        self.vessel.flight().drag, self.vessel.available_thrust() self.vessel.mass()
+        self.roll_pid.Kp = 1 / (max_engage_roll * acceleration[0])
+        self.pitch_pid.Kp = 1 / (max_engage_pitch * acceleration[1])
+        self.yaw_pid.Kp = 1 / (max_engage_yaw * acceleration[2])
 
 class Derivative:
 
