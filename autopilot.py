@@ -24,5 +24,5 @@ def heading_difference(heading1, heading2):
 fc = FlightController(vessel, conn, ut())
 while True:
     fc.update_state(ut())
-    fc.attitude_control(0,0,0,150, ut())
-
+    fc.attitude_control(10,0,0,180, ut())
+    fc.tune_pid()
